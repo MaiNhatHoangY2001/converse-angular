@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-import { HomeComponent } from './pages/home/home.component';
+import { HomeComponent } from './features/home/home.component';
 import { ThemeService } from './shared/services/theme.service';
 import { TranslationService } from './shared/services/translation.service';
 

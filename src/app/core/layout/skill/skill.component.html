@@ -1,0 +1,8 @@
+<div class="text-center text-[--surface-600] text-4xl font-bold">{{ 'SKILL.TITLE' | translate }}</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-4">
+  <p-card styleClass="text-left p-8 h-full" *ngFor="let content of cardsContent">
+    <img alt="Card" src="{{ content.img }}" class="w-16 h-14" />
+    <p class="text-[--surface-600] text-xl font-bold">{{ content.title | translate }}</p>
+    <p class="text-[--surface-600] text-xl">{{ content.description }}</p>
+  </p-card>
+</div>

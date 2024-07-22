@@ -1,0 +1,11 @@
+.layout-content {
+  @apply flex items-center h-screen w-full justify-center flex-col md:flex-row md:mx-auto;
+}
+
+.layout-css {
+  @apply flex items-center justify-evenly flex-col;
+}
+
+.layout-last-work {
+  @apply flex items-center justify-evenly flex-col mt-20 md:w-3/4 md:mx-auto;
+}

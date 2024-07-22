@@ -1,0 +1,12 @@
+<p-toolbar class="layout-topbar" styleClass="border-0 rounded-none">
+  <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" alt="primeng.svg" />
+
+  <div class="flex justify-between px-4">
+    <p-button
+      icon="pi {{ checked ? 'pi-moon' : 'pi-sun' }}"
+      class="self-center"
+      styleClass="h-11 w-11 mx-2"
+      (onClick)="onThemeChange(!checked)"></p-button>
+    <app-language-setting></app-language-setting>
+  </div>
+</p-toolbar>

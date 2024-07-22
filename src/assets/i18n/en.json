@@ -1,0 +1,26 @@
+{
+  "ABOUT_ME": {
+    "DESC_1": "I'm {{name}}, a software developer with a passion for creating innovative solutions. With {{year}} years of experience in the industry, I specialize in [mention your key areas of expertise like web development, mobile apps, etc.]. My journey in coding started with [brief backstory or inspiration], and since then, I've worked on various projects that have honed my skills and expanded my knowledge.",
+    "DESC_2": "I am always excited to take on new challenges and collaborate with talented individuals. When I'm not coding, you can find me [mention any hobbies or interests].",
+    "TITLE": "About Me"
+  },
+  "BUTTON": {
+    "DOWNLOAD_CV": "DOWNLOAD CV",
+    "HIRE_ME": "HIRE ME",
+    "VIEW_WORKS": "VIEW WORKS"
+  },
+  "HIRE_ME": {
+    "TITLE_1": "Hi, I'm {{name}}",
+    "TITLE_2": "A passionate Software Developer"
+  },
+  "LATEST_WORKS": {
+    "TITLE": "Latest Works"
+  },
+  "SKILL": {
+    "ITEM_1": "Programming Languages",
+    "ITEM_2": "Frameworks & Libraries",
+    "ITEM_3": "Tools & Platforms",
+    "ITEM_4": "Database Management",
+    "TITLE": "Skills"
+  }
+}

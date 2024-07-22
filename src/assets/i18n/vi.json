@@ -1,0 +1,26 @@
+{
+  "ABOUT_ME": {
+    "DESC_1": "Tôi là {{name}}, một nhà phát triển phần mềm có niềm đam mê tạo ra các giải pháp đổi mới. Với {{year}} năm kinh nghiệm trong ngành, tôi chuyên về [đề cập đến các lĩnh vực chuyên môn chính của bạn như phát triển web, ứng dụng dành cho thiết bị di động, v.v.]. Hành trình viết mã của tôi bắt đầu với [cốt truyện hoặc nguồn cảm hứng ngắn gọn] và kể từ đó, tôi đã làm việc trong nhiều dự án khác nhau nhằm mài giũa kỹ năng và mở rộng kiến ​​thức của mình.",
+    "DESC_2": "Tôi luôn hào hứng đón nhận những thử thách mới và cộng tác với những cá nhân tài năng. Khi tôi không viết mã, bạn có thể tìm thấy tôi [đề cập đến bất kỳ sở thích hoặc mối quan tâm nào].",
+    "TITLE": "Về tôi"
+  },
+  "BUTTON": {
+    "DOWNLOAD_CV": "TẢI XUỐNG CV",
+    "HIRE_ME": "THUÊ TÔI",
+    "VIEW_WORKS": "XEM DỰ ÁN CỦA TÔI"
+  },
+  "HIRE_ME": {
+    "TITLE_1": "Xin chào, tôi là {{name}}",
+    "TITLE_2": "Một nhà phát triển phần mềm đầy đam mê"
+  },
+  "LATEST_WORKS": {
+    "TITLE": "Tác phẩm mới nhất"
+  },
+  "SKILL": {
+    "ITEM_1": "Ngôn ngữ lập trình",
+    "ITEM_2": "Framework & Thư viện",
+    "ITEM_3": "Công cụ & Nền tảng",
+    "ITEM_4": "Quản lý cơ sở dữ liệu",
+    "TITLE": "Kỹ năng"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/core/layout/header/header.component.scss"],
+  "sourcesContent": [".layout-topbar {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: calc(100% - var(--scrollbar-width, 0px));\n  z-index: 1100;\n  transition:\n    background-color 0.5s,\n    border-color 0.5s;\n  border-bottom: 1px solid transparent;\n}\n.layout-topbar-sticky {\n  border-bottom: 1px solid var(--surface-border);\n  background-color: var(--topbar-sticky-bg);\n  -webkit-backdrop-filter: blur(8px);\n  backdrop-filter: blur(8px);\n}\n"],
+  "mappings": "AAAA,CAAA,cACE,SAAA,MACA,IAAA,EACA,KAAA,EACA,MAAA,KAAA,KAAA,EAAA,IAAA,iBAAA,EAAA,MACA,QAAA,KACA,WACE,iBAAA,GAAA,CAAA,aAAA,IAEF,cAAA,IAAA,MAAA,YAEF,CAAA,qBACE,cAAA,IAAA,MAAA,IAAA,kBACA,iBAAA,IAAA,oBACA,wBAAA,KAAA,KACA,gBAAA,KAAA",
+  "names": []
+}

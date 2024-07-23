@@ -6,12 +6,17 @@
   },
   "BUTTON": {
     "DOWNLOAD_CV": "DOWNLOAD CV",
-    "HIRE_ME": "HIRE ME",
+    "LEARN_MORE": "Learn More",
+    "LOGIN": "Login",
+    "REGISTER": "Register",
+    "START_NOW": "Get Started Now",
     "VIEW_WORKS": "VIEW WORKS"
   },
   "HIRE_ME": {
-    "TITLE_1": "Hi, I'm {{name}}",
     "TITLE_2": "A passionate Software Developer"
+  },
+  "HOME": {
+    "TITLE_1": "Master English Effortlessly with AI-Powered  Learning"
   },
   "LATEST_WORKS": {
     "TITLE": "Latest Works"

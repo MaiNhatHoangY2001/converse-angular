@@ -1,5 +1,5 @@
 <p-toolbar class="layout-topbar" styleClass="border-0 rounded-none">
-  <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" alt="primeng.svg" />
+  <img class="h-11" src="{{ baseImageUrl }}/logo-brand.png" alt="brand.svg" />
 
   <div class="flex justify-between px-4">
     <p-button
@@ -8,5 +8,14 @@
       styleClass="h-11 w-11 mx-2"
       (onClick)="onThemeChange(!checked)"></p-button>
     <app-language-setting></app-language-setting>
+    <p-divider layout="vertical" styleClass="mx-2 h-11" />
+    <div class="flex">
+      <p-button
+        [text]="true"
+        severity="secondary"
+        label="{{ 'BUTTON.LOGIN' | translate }}"
+        class="self-center"></p-button>
+      <p-button class="ml-2 self-center" label="{{ 'BUTTON.REGISTER' | translate }}"></p-button>
+    </div>
   </div>
 </p-toolbar>

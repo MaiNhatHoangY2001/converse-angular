@@ -1,4 +1,6 @@
-<div class="text-center text-[--surface-600] text-4xl font-bold">{{ 'LATEST_WORKS.TITLE' | translate }}</div>
+<div class="text-center text-[--surface-600] text-4xl font-bold">
+  {{ 'LATEST_WORKS.TITLE' | translate }}
+</div>
 <div class="w-full">
   <p-carousel
     styleClass="w-full"
@@ -6,8 +8,7 @@
     [numVisible]="3"
     [numScroll]="1"
     [circular]="true"
-    [responsiveOptions]="responsiveOptions"
-  >
+    [responsiveOptions]="responsiveOptions">
     <ng-template let-product pTemplate="item">
       <p-card styleClass="border-1 surface-border border-round m-2">
         <ng-template pTemplate="header">

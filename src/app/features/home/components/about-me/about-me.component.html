@@ -1,4 +1,6 @@
-<div class="text-center text-[--surface-600] text-4xl font-bold">{{ 'ABOUT_ME.TITLE' | translate }}</div>
+<div class="text-center text-[--surface-600] text-4xl font-bold">
+  {{ 'ABOUT_ME.TITLE' | translate }}
+</div>
 <div class="text-left md:text-center text-[--surface-600] text-2xl break-words px-5 sm:px-0">
   {{ 'ABOUT_ME.DESC_1' | translate: { name: 'Hoang', year: '2' } }}
 </div>
@@ -7,5 +9,8 @@
 </div>
 <div class="md:text-center flex justify-between">
   <p-button styleClass="w-fit h-50 mx-2" label="{{ 'BUTTON.VIEW_WORKS' | translate }}" />
-  <p-button styleClass="w-fit h-50" severity="secondary" label="{{ 'BUTTON.DOWNLOAD_CV' | translate }}" />
+  <p-button
+    styleClass="w-fit h-50"
+    severity="secondary"
+    label="{{ 'BUTTON.DOWNLOAD_CV' | translate }}" />
 </div>

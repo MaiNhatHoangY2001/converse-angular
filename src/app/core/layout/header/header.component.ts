@@ -2,14 +2,25 @@ import { ChangeDetectionStrategy, Component, HostListener, OnInit } from '@angul
 import { FormsModule } from '@angular/forms';
 import { LanguageSettingComponent } from '@app/core/layout/language-setting/language-setting.component';
 import { ThemeService } from '@app/shared/services/theme.service';
+import { environment } from '@env/environment';
+import { TranslateModule } from '@ngx-translate/core';
 import { ButtonModule } from 'primeng/button';
+import { DividerModule } from 'primeng/divider';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { ToolbarModule } from 'primeng/toolbar';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [LanguageSettingComponent, ToolbarModule, InputSwitchModule, FormsModule, ButtonModule],
+  imports: [
+    LanguageSettingComponent,
+    ToolbarModule,
+    InputSwitchModule,
+    FormsModule,
+    ButtonModule,
+    TranslateModule,
+    DividerModule,
+  ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -39,5 +50,9 @@ export class HeaderComponent implements OnInit {
     this.checked = check;
     this.selectedTheme = theme;
     this.themService.setTheme(theme);
+  }
+
+  get baseImageUrl() {
+    return environment.GOOGLE_STORAGE_URL;
   }
 }

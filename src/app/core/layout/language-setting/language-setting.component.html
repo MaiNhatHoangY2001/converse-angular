@@ -3,22 +3,24 @@
   [(ngModel)]="selectedLang"
   optionLabel="label"
   placeholder="Select a City"
-  (onChange)="handleChangeLanguage($event)"
->
+  (onChange)="handleChangeLanguage($event)">
   <ng-template pTemplate="selectedItem">
     <div class="flex align-items-center" *ngIf="selectedLang">
       <img
         width="25"
         height="25"
         src="https://img.icons8.com/color/96/{{ selectedLang.icon }}"
-        [alt]="selectedLang.label"
-      />
+        [alt]="selectedLang.label" />
       <div class="align-middle self-center">{{ selectedLang.label }}</div>
     </div>
   </ng-template>
   <ng-template let-language pTemplate="item">
     <div class="flex align-items-center">
-      <img width="20" height="20" src="https://img.icons8.com/color/96/{{ language.icon }}" [alt]="language.label" />
+      <img
+        width="20"
+        height="20"
+        src="https://img.icons8.com/color/96/{{ language.icon }}"
+        [alt]="language.label" />
       <div>{{ language.label }}</div>
     </div>
   </ng-template>

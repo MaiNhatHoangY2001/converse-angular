@@ -1,33 +1,35 @@
-<app-header></app-header>
-<div class="text-center pb-0 flex flex-col justify-between">
-  <div class="layout-content">
-    <div class="w-4/5 md:w-[30%] h-1/2 flex flex-col justify-center md:justify-evenly">
-      <div class="text-[--surface-600] text-3xl text-left">
-        {{ 'HIRE_ME.TITLE_1' | translate: { name: 'Hoang' } }}
+<div [class]="isDarkTheme ? 'layout-dark' : 'layout-light'">
+  <app-header></app-header>
+  <div class="text-center pb-0 flex flex-col justify-between">
+    <div class="layout-content">
+      <div class="w-4/5 md:w-[30%] h-1/2 flex flex-col justify-center md:justify-evenly">
+        <div class="text-[--surface-600] text-5xl font-bold text-left my-4 md:my-0">
+          {{ 'HOME.TITLE_1' | translate }}
+        </div>
+        <div class="flex">
+          <p-button class="text-2xl text-left" label="{{ 'BUTTON.LEARN_MORE' | translate }}" />
+          <p-button
+            severity="secondary"
+            class="text-2xl text-left ml-2"
+            label="{{ 'BUTTON.START_NOW' | translate }}" />
+        </div>
       </div>
-      <div class="text-[--surface-600] text-4xl font-bold text-left my-4 md:my-0">
-        {{ 'HIRE_ME.TITLE_2' | translate }}
+      <div class="w-4/5 md:w-[45%] text-right">
+        <img src="{{ baseImageUrl }}/home.png" alt="hire-me.png" class="w-full md:w-4/5" />
       </div>
-      <p-button
-        styleClass="w-40 h-50"
-        class="text-2xl text-left"
-        label="{{ 'BUTTON.HIRE_ME' | translate }}" />
     </div>
-    <div class="w-4/5 md:w-[45%] text-right">
-      <img src="./assets/img/hire-me.png" alt="hire-me.png" class="w-full md:w-4/5" />
+    <app-about-me class="layout-css md:w-1/2 h-screen md:mx-auto"></app-about-me>
+    <app-skill class="layout-css flex-col md:w-1/2 md:mx-auto"></app-skill>
+    <app-latest-work class="layout-last-work md:w-1/2 md:mx-auto"></app-latest-work>
+    <app-footer class="layout-css bg-[--primary-color] md:h-[30vh]"></app-footer>
+    <div class="flex justify-center p-5 md:p-10">
+      <a
+        class="mx-10"
+        [href]="item.link"
+        *ngFor="let item of listIcon; trackBy: identify"
+        target="_blank">
+        <img [src]="item.img" [alt]="item.alt" class="w-8 h-8 sm:w-12 sm:h-12" />
+      </a>
     </div>
-  </div>
-  <app-about-me class="layout-css md:w-1/2 h-screen md:mx-auto"></app-about-me>
-  <app-skill class="layout-css flex-col md:w-1/2 md:mx-auto"></app-skill>
-  <app-latest-work class="layout-last-work md:w-1/2 md:mx-auto"></app-latest-work>
-  <app-footer class="layout-css bg-[--primary-color] md:h-[30vh]"></app-footer>
-  <div class="flex justify-center p-5 md:p-10">
-    <a
-      class="mx-10"
-      [href]="item.link"
-      *ngFor="let item of listIcon; trackBy: identify"
-      target="_blank">
-      <img [src]="item.img" [alt]="item.alt" class="w-8 h-8 sm:w-12 sm:h-12" />
-    </a>
   </div>
 </div>

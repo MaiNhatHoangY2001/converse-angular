@@ -6,12 +6,17 @@
   },
   "BUTTON": {
     "DOWNLOAD_CV": "TẢI XUỐNG CV",
-    "HIRE_ME": "THUÊ TÔI",
+    "LEARN_MORE": "Tìm hiểu thêm",
+    "LOGIN": "Đăng nhập",
+    "REGISTER": "Đăng ký",
+    "START_NOW": "Bắt đầu ngay bây giờ",
     "VIEW_WORKS": "XEM DỰ ÁN CỦA TÔI"
   },
   "HIRE_ME": {
-    "TITLE_1": "Xin chào, tôi là {{name}}",
     "TITLE_2": "Một nhà phát triển phần mềm đầy đam mê"
+  },
+  "HOME": {
+    "TITLE_1": "Học tiếng Anh dễ dàng với phương pháp học tập được hỗ trợ bởi AI"
   },
   "LATEST_WORKS": {
     "TITLE": "Tác phẩm mới nhất"

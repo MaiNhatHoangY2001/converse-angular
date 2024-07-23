@@ -1,14 +1,14 @@
 {
-  "name": "converse",
+  "name": "converse-angular",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:git": "ng build --configuration=production --base-href=/converse/",
+    "build:git": "ng build --configuration=production --base-href=/converse-angular/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:converse": "node dist/converse/server/server.mjs",
+    "serve:ssr:converse-angular": "node dist/converse-angular/server/server.mjs",
     "preinstall": "npx only-allow pnpm",
     "lint": "ng lint --force",
     "pretty-quick": "pretty-quick --staged",

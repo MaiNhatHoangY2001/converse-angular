@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { ButtonModule } from 'primeng/button';
 
@@ -8,5 +8,6 @@ import { ButtonModule } from 'primeng/button';
   imports: [TranslateModule, ButtonModule],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AboutMeComponent {}

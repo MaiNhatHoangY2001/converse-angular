@@ -8,10 +8,8 @@ describe('LanguageSettingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LanguageSettingComponent]
-    })
-    .compileComponents();
-    
+      imports: [LanguageSettingComponent],
+    }).compileComponents();
     fixture = TestBed.createComponent(LanguageSettingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -15,7 +15,7 @@ export class TranslationService {
     this.translate.addLangs(['en', 'vi']);
     this.translate.setDefaultLang('en');
     this.translate.use(this.getLanguage());
-    this.translate.get('primeng').subscribe((res) => this.config.setTranslation(res));
+    this.translate.get('primeng').subscribe(res => this.config.setTranslation(res));
   }
 
   changeLanguage(language: string): void {

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
@@ -17,13 +17,17 @@ interface Reponsive {
   imports: [CardModule, CarouselModule, TranslateModule, CommonModule, ButtonModule],
   templateUrl: './latest-work.component.html',
   styleUrl: './latest-work.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LatestWorkComponent implements OnInit {
   products = [
     {
+      // eslint-disable-next-line sonarjs/no-duplicate-string
       name: 'Converse - Chat with AI',
+      // eslint-disable-next-line sonarjs/no-duplicate-string
       img: 'assets/img/product-default.png',
       description:
+        // eslint-disable-next-line sonarjs/no-duplicate-string
         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita asperiores quis ad saepe esse eius quae praesentium qui unde cum.',
     },
     {

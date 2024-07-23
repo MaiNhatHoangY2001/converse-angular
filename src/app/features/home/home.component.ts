@@ -1,5 +1,5 @@
 import { NgFor } from '@angular/common';
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { AboutMeComponent } from '@app/core/layout/about-me/about-me.component';
 import { FooterComponent } from '@app/core/layout/footer/footer.component';
 import { HeaderComponent } from '@app/core/layout/header/header.component';
@@ -10,6 +10,11 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ButtonModule } from 'primeng/button';
 import { ToolbarModule } from 'primeng/toolbar';
 
+interface Icon {
+  alt: string;
+  img: string;
+  link: string;
+}
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -27,6 +32,7 @@ import { ToolbarModule } from 'primeng/toolbar';
     LatestWorkComponent,
     FooterComponent,
   ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent {
   listIcon = [
@@ -35,4 +41,8 @@ export class HomeComponent {
     { alt: 'google', img: 'assets/img/google.png', link: '#' },
     { alt: 'facebook', img: 'assets/img/facebook.png', link: '#' },
   ];
+
+  identify(index: number, item: Icon) {
+    return item.alt;
+  }
 }

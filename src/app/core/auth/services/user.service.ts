@@ -51,10 +51,10 @@ export class UserService {
     );
   }
 
-  update(user: Partial<User>): Observable<{ user: User }> {
-    return this.http.put<{ user: User }>('/user', { user }).pipe(
-      tap(({ user }) => {
-        this.currentUserSubject.next(user);
+  update(user: Partial<User>): Observable<{ user1: User }> {
+    return this.http.put<{ user1: User }>('/user', { user }).pipe(
+      tap(({ user1 }) => {
+        this.currentUserSubject.next(user1);
       }),
     );
   }

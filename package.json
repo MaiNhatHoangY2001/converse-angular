@@ -1,15 +1,14 @@
 {
-  "name": "my-portfolio",
+  "name": "converse",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --configuration=production --base-href=/my-portfolio/",
-    "build:git": "ng build --base-href /my-portfolio/ && npx angular-cli-ghpages --dir=dist/my-portfolio/browser --no-silent",
+    "build:git": "ng build --configuration=production --base-href=/converse/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:my-portfolio": "node dist/my-portfolio/server/server.mjs",
+    "serve:ssr:converse": "node dist/converse/server/server.mjs",
     "preinstall": "npx only-allow pnpm",
     "lint": "ng lint --force",
     "pretty-quick": "pretty-quick --staged",

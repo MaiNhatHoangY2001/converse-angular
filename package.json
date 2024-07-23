@@ -12,6 +12,7 @@
     "serve:ssr:my-portfolio": "node dist/my-portfolio/server/server.mjs",
     "preinstall": "npx only-allow pnpm",
     "lint": "ng lint --force",
+    "pretty-quick": "pretty-quick --staged",
     "lint-fix":"ng lint --fix",
     "prepare": "husky"
   },

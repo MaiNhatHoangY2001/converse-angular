@@ -1,7 +1,19 @@
 <p-toolbar class="layout-topbar" styleClass="border-0 rounded-none">
   <img class="h-11" src="{{ baseImageUrl }}/logo-brand.png" alt="brand.svg" />
 
-  <div class="flex justify-between px-4">
+  <div class="sm:hidden card flex justify-content-center">
+    <p-menu #menu [model]="menuItems" [popup]="true" appendTo="body">
+      <ng-template pTemplate="item" let-item>
+        <div pRipple class="flex align-items-center p-menuitem-link">
+          <span [class]="item.icon"></span>
+          <span class="ml-2">{{ item.label | translate }}</span>
+        </div>
+      </ng-template>
+    </p-menu>
+    <p-button (onClick)="menu.toggle($event)" icon="pi pi-list" />
+  </div>
+
+  <div class="hidden sm:flex justify-between px-4">
     <p-button
       icon="pi {{ checked ? 'pi-moon' : 'pi-sun' }}"
       class="self-center"
@@ -19,3 +31,36 @@
     </div>
   </div>
 </p-toolbar>
+<p-dialog
+  header="{{ 'BUTTON.SETTING' | translate }}"
+  [modal]="true"
+  [(visible)]="isShowDialog"
+  [style]="{ width: '80vw', height: '18rem' }">
+  <div class="flex align-items-center gap-3 mb-10">
+    <label class="font-semibold w-24 self-center">{{ 'SETTING.THEME.TITLE' | translate }}</label>
+    <p-dropdown
+      [styleClass]="'w-50'"
+      [options]="themeItems"
+      [(ngModel)]="selectedTheme"
+      appendTo="body"
+      optionLabel="label"
+      (onChange)="onThemeChangeDropDown($event)">
+      <ng-template pTemplate="selectedItem">
+        <div class="flex align-items-center" *ngIf="selectedTheme">
+          <i class="{{ selectedTheme.icon }} self-center mr-2" style="font-size: 1.2rem"></i>
+          <div class="align-middle self-center">{{ selectedTheme.label | translate }}</div>
+        </div>
+      </ng-template>
+      <ng-template let-theme pTemplate="item">
+        <div class="flex align-items-center">
+          <i class="{{ theme.icon }} self-center mr-2" style="font-size: 1.2rem"></i>
+          <div class="align-middle self-center">{{ theme.label | translate }}</div>
+        </div>
+      </ng-template>
+    </p-dropdown>
+  </div>
+  <div class="flex align-items-center gap-3 mb-5">
+    <label class="font-semibold w-24 self-center">{{ 'SETTING.LANGUAGE' | translate }}</label>
+    <app-language-setting inputClass="w-50"></app-language-setting>
+  </div>
+</p-dialog>

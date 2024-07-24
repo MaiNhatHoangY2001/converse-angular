@@ -1,0 +1,15 @@
+<div class="text-center text-[--surface-600] text-4xl font-bold">
+  {{ 'CHOOSE_US.TITLE' | translate }}
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 mt-4 mx-5">
+  <p-card styleClass="p-5 h-full" *ngFor="let content of cardsContent; trackBy: identify">
+    <div class="h-48 relative aspect-square mx-auto">
+      <img alt="Card" ngSrc="{{ baseImageUrl }}/{{ content.img }}" fill priority />
+    </div>
+
+    <p class="text-[--surface-600] text-xl font-bold text-center">
+      {{ content.title | translate }}
+    </p>
+    <p class="text-[--surface-600] text-xl text-center">{{ content.description | translate }}</p>
+  </p-card>
+</div>

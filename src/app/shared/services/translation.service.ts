@@ -19,10 +19,13 @@ export class TranslationService {
   }
 
   changeLanguage(language: string): void {
+    localStorage.setItem('lang', language);
     this.translate.use(language);
   }
 
   getLanguage(): string {
+    const language = localStorage.getItem('lang');
+    if (language) return language;
     const browserLang = this.translate.getBrowserLang() ?? '';
     return RegExp(/en|vi/).exec(browserLang) ? browserLang : 'en';
   }

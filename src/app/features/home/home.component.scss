@@ -1,5 +1,5 @@
 .layout-content {
-  @apply flex items-center h-screen w-full justify-center flex-col md:flex-row md:mx-auto;
+  @apply flex items-center max-h-screen h-screen w-full justify-evenly flex-col md:flex-row md:mx-auto;
 }
 
 .layout-css {

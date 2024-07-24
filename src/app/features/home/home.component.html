@@ -1,25 +1,29 @@
-<div [class]="isDarkTheme ? 'layout-dark' : 'layout-light'">
+<div class="layout-{{ theme }}">
   <app-header></app-header>
-  <div class="text-center pb-0 flex flex-col justify-between">
+  <div class="text-center pt-10 sm:pt-0 pb-0 flex flex-col justify-between">
     <div class="layout-content">
       <div class="w-4/5 md:w-[30%] h-1/2 flex flex-col justify-center md:justify-evenly">
         <div class="text-[--surface-600] text-5xl font-bold text-left my-4 md:my-0">
           {{ 'HOME.TITLE_1' | translate }}
         </div>
         <div class="flex">
-          <p-button class="text-2xl text-left" label="{{ 'BUTTON.LEARN_MORE' | translate }}" />
+          <p-button
+            class="text-2xl text-left whitespace-nowrap"
+            label="{{ 'BUTTON.LEARN_MORE' | translate }}" />
           <p-button
             severity="secondary"
-            class="text-2xl text-left ml-2"
+            class="text-2xl text-left ml-2 whitespace-nowrap"
             label="{{ 'BUTTON.START_NOW' | translate }}" />
         </div>
       </div>
       <div class="w-4/5 md:w-[45%] text-right">
-        <img src="{{ baseImageUrl }}/home.png" alt="hire-me.png" class="w-full md:w-4/5" />
+        <div class="w-full md:w-9/12 aspect-square relative mx-auto">
+          <img ngSrc="{{ baseImageUrl }}/home.png" alt="home.png" fill priority />
+        </div>
       </div>
     </div>
-    <app-about-me class="layout-css md:w-1/2 h-screen md:mx-auto"></app-about-me>
-    <app-skill class="layout-css flex-col md:w-1/2 md:mx-auto"></app-skill>
+    <app-choose-us class="layout-css xl:h-screen"></app-choose-us>
+    <app-course class="layout-css xl:h-screen"></app-course>
     <app-latest-work class="layout-last-work md:w-1/2 md:mx-auto"></app-latest-work>
     <app-footer class="layout-css bg-[--primary-color] md:h-[30vh]"></app-footer>
     <div class="flex justify-center p-5 md:p-10">

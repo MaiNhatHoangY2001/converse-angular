@@ -1,5 +1,5 @@
 import { NgIf } from '@angular/common';
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TranslationService } from '@app/shared/services/translation.service';
 import { DropdownChangeEvent, DropdownModule } from 'primeng/dropdown';
@@ -32,6 +32,7 @@ const LANGUAGES = [
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LanguageSettingComponent implements OnInit {
+  @Input() inputClass: string | undefined;
   lang: Language[] | undefined;
   selectedLang: Language | undefined;
 

@@ -1,5 +1,5 @@
-import { NgFor } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { NgFor, NgOptimizedImage } from '@angular/common';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FooterComponent } from '@app/core/layout/footer/footer.component';
 import { HeaderComponent } from '@app/core/layout/header/header.component';
 import { LanguageSettingComponent } from '@app/core/layout/language-setting/language-setting.component';
@@ -9,9 +9,9 @@ import { environment } from '@env/environment';
 import { TranslateModule } from '@ngx-translate/core';
 import { ButtonModule } from 'primeng/button';
 import { ToolbarModule } from 'primeng/toolbar';
-import { AboutMeComponent } from './components/about-me/about-me.component';
+import { ChooseUsComponent } from './components/choose-us/choose-us.component';
 import { LatestWorkComponent } from './components/latest-work/latest-work.component';
-import { SkillComponent } from './components/skill/skill.component';
+import { CourseComponent } from './components/course/course.component';
 
 interface Icon {
   alt: string;
@@ -30,14 +30,15 @@ interface Icon {
     ButtonModule,
     LanguageSettingComponent,
     ToolbarModule,
-    AboutMeComponent,
-    SkillComponent,
+    ChooseUsComponent,
+    CourseComponent,
     LatestWorkComponent,
     FooterComponent,
+    NgOptimizedImage,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   listIcon = [
     { alt: 'github', img: 'assets/img/github.png', link: 'https://github.com/MaiNhatHoangY2001' },
     { alt: 'linked', img: 'assets/img/linked.png', link: '#' },
@@ -47,13 +48,17 @@ export class HomeComponent {
 
   constructor(
     translationService: TranslationService,
-    private themService: ThemeService,
+    private themeService: ThemeService,
   ) {
     translationService.initLanguage();
   }
 
-  get isDarkTheme() {
-    return this.themService.getTheme();
+  ngOnInit(): void {
+    this.themeService.initTheme();
+  }
+
+  get theme() {
+    return this.themeService.getTheme();
   }
 
   get baseImageUrl() {

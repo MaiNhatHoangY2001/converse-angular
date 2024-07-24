@@ -1,12 +1,14 @@
 <p-dropdown
+  [styleClass]="inputClass"
   [options]="lang"
   [(ngModel)]="selectedLang"
+  appendTo="body"
   optionLabel="label"
-  placeholder="Select a City"
   (onChange)="handleChangeLanguage($event)">
   <ng-template pTemplate="selectedItem">
     <div class="flex align-items-center" *ngIf="selectedLang">
       <img
+        class="mr-2"
         width="25"
         height="25"
         src="https://img.icons8.com/color/96/{{ selectedLang.icon }}"
@@ -17,6 +19,7 @@
   <ng-template let-language pTemplate="item">
     <div class="flex align-items-center">
       <img
+        class="mr-2"
         width="20"
         height="20"
         src="https://img.icons8.com/color/96/{{ language.icon }}"

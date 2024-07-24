@@ -1,16 +1,36 @@
 {
-  "ABOUT_ME": {
-    "DESC_1": "I'm {{name}}, a software developer with a passion for creating innovative solutions. With {{year}} years of experience in the industry, I specialize in [mention your key areas of expertise like web development, mobile apps, etc.]. My journey in coding started with [brief backstory or inspiration], and since then, I've worked on various projects that have honed my skills and expanded my knowledge.",
-    "DESC_2": "I am always excited to take on new challenges and collaborate with talented individuals. When I'm not coding, you can find me [mention any hobbies or interests].",
-    "TITLE": "About Me"
-  },
   "BUTTON": {
     "DOWNLOAD_CV": "DOWNLOAD CV",
     "LEARN_MORE": "Learn More",
     "LOGIN": "Login",
     "REGISTER": "Register",
+    "SETTING": "Setting",
     "START_NOW": "Get Started Now",
     "VIEW_WORKS": "VIEW WORKS"
+  },
+  "CHOOSE_US": {
+    "ITEM": {
+      "DESC_1": "Our AI algorithms customize your study plan based on your strengths and areas for improvement.",
+      "DESC_2": "Engage in dynamic activities that make learning English fun and effective.",
+      "DESC_3": "Receive instant corrections and suggestions to enhance your language skills.",
+      "DESC_4": "Benefit from lessons designed by experienced English educators and linguists.",
+      "TITLE_1": "Personalized Learning Paths",
+      "TITLE_2": "Interactive Exercises",
+      "TITLE_3": "Real-Time Feedback",
+      "TITLE_4": "Expert English lessons"
+    },
+    "TITLE": "Why Choose Us?"
+  },
+  "COURSE": {
+    "ITEM": {
+      "TITLE_1": "Beginner English",
+      "TITLE_2": "Intermediate English",
+      "TITLE_3": "Advanced English",
+      "TITLE_4": "Business English",
+      "TITLE_5": "English for Travel",
+      "TITLE_6": "Exam Preparation (IELTS, TOEFL)"
+    },
+    "TITLE": "Choosing a course you are truly interested"
   },
   "HIRE_ME": {
     "TITLE_2": "A passionate Software Developer"
@@ -20,6 +40,14 @@
   },
   "LATEST_WORKS": {
     "TITLE": "Latest Works"
+  },
+  "SETTING": {
+    "LANGUAGE": "Language",
+    "THEME": {
+      "DARK": "Dark",
+      "LIGHT": "Light",
+      "TITLE": "Theme"
+    }
   },
   "SKILL": {
     "ITEM_1": "Programming Languages",

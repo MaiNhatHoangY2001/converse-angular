@@ -1,16 +1,36 @@
 {
-  "ABOUT_ME": {
-    "DESC_1": "Tôi là {{name}}, một nhà phát triển phần mềm có niềm đam mê tạo ra các giải pháp đổi mới. Với {{year}} năm kinh nghiệm trong ngành, tôi chuyên về [đề cập đến các lĩnh vực chuyên môn chính của bạn như phát triển web, ứng dụng dành cho thiết bị di động, v.v.]. Hành trình viết mã của tôi bắt đầu với [cốt truyện hoặc nguồn cảm hứng ngắn gọn] và kể từ đó, tôi đã làm việc trong nhiều dự án khác nhau nhằm mài giũa kỹ năng và mở rộng kiến ​​thức của mình.",
-    "DESC_2": "Tôi luôn hào hứng đón nhận những thử thách mới và cộng tác với những cá nhân tài năng. Khi tôi không viết mã, bạn có thể tìm thấy tôi [đề cập đến bất kỳ sở thích hoặc mối quan tâm nào].",
-    "TITLE": "Về tôi"
-  },
   "BUTTON": {
     "DOWNLOAD_CV": "TẢI XUỐNG CV",
     "LEARN_MORE": "Tìm hiểu thêm",
     "LOGIN": "Đăng nhập",
     "REGISTER": "Đăng ký",
+    "SETTING": "Cài đặt",
     "START_NOW": "Bắt đầu ngay bây giờ",
     "VIEW_WORKS": "XEM DỰ ÁN CỦA TÔI"
+  },
+  "CHOOSE_US": {
+    "ITEM": {
+      "DESC_1": "Các thuật toán AI của chúng tôi tùy chỉnh kế hoạch học tập của bạn dựa trên điểm mạnh và lĩnh vực cần cải thiện của bạn.",
+      "DESC_2": "Tham gia vào các hoạt động năng động giúp việc học tiếng Anh trở nên thú vị và hiệu quả.",
+      "DESC_3": "Nhận các chỉnh sửa và đề xuất ngay lập tức để nâng cao kỹ năng ngôn ngữ của bạn.",
+      "DESC_4": "Hưởng lợi từ các bài học được thiết kế bởi các nhà giáo dục và ngôn ngữ học tiếng Anh giàu kinh nghiệm.",
+      "TITLE_1": "Lộ trình học tập được cá nhân hóa",
+      "TITLE_2": "Bài tập tương tác",
+      "TITLE_3": "Phản hồi theo thời gian thực",
+      "TITLE_4": "Bài học tiếng Anh chuyên nghiệp"
+    },
+    "TITLE": "Tại sao chọn chúng tôi?"
+  },
+  "COURSE": {
+    "ITEM": {
+      "TITLE_1": "Tiếng Anh Sơ cấp",
+      "TITLE_2": "Tiếng Anh trung cấp",
+      "TITLE_3": "Tiếng Anh nâng cao",
+      "TITLE_4": "Tiếng Anh thương mại",
+      "TITLE_5": "Tiếng Anh Du Lịch",
+      "TITLE_6": "Luyện thi (IELTS, TOEFL)"
+    },
+    "TITLE": "Lựa chọn khóa học bạn thực sự quan tâm"
   },
   "HIRE_ME": {
     "TITLE_2": "Một nhà phát triển phần mềm đầy đam mê"
@@ -20,6 +40,14 @@
   },
   "LATEST_WORKS": {
     "TITLE": "Tác phẩm mới nhất"
+  },
+  "SETTING": {
+    "LANGUAGE": "Ngôn ngữ",
+    "THEME": {
+      "DARK": "Tối",
+      "LIGHT": "Sáng",
+      "TITLE": "Giao diện"
+    }
   },
   "SKILL": {
     "ITEM_1": "Ngôn ngữ lập trình",

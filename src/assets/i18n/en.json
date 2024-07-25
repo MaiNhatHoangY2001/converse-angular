@@ -32,14 +32,63 @@
     },
     "TITLE": "Choosing a course you are truly interested"
   },
+  "FOOTER": {
+    "COOKIES": "Cookies",
+    "PRIVACY": "Privacy",
+    "TERMS": "Terms"
+  },
   "HIRE_ME": {
     "TITLE_2": "A passionate Software Developer"
   },
   "HOME": {
     "TITLE_1": "Master English Effortlessly with AI-Powered  Learning"
   },
+  "JOURNEY": {
+    "BUTTON": "Sign Up Now",
+    "SUB_TITLE": "Join thousands of learners worldwide and unlock a world of opportunities with fluent English.",
+    "TITLE": "Start Your Journey Today!"
+  },
   "LATEST_WORKS": {
     "TITLE": "Latest Works"
+  },
+  "PLAN": {
+    "BASIC": {
+      "BUTTON": "Start Basic Plan",
+      "OPTION_1": "Access to all beginner and intermediate lessons",
+      "OPTION_2": "Interactive exercises",
+      "OPTION_3": "Personalized AI feedback",
+      "OPTION_4": "Community forum access",
+      "OPTION_5": "Bi-weekly progress reports",
+      "OPTION_6": "Access to mobile app",
+      "SUB_TITLE": "Learners looking for a structured learning path with essential features",
+      "TITLE": "Basic"
+    },
+    "FREE": {
+      "BUTTON": "Sign Up for Free",
+      "OPTION_1": "Access to basic English lessons",
+      "OPTION_2": "Interactive exercises",
+      "OPTION_3": "Limited AI feedback",
+      "OPTION_4": "Community forum access",
+      "OPTION_5": "Weekly progress reports",
+      "OPTION_6": "Sign Up for Free",
+      "SUB_TITLE": "Beginners wanting to explore the basics",
+      "TITLE": "Free"
+    },
+    "PRO": {
+      "BUTTON": "Upgrade to Pro",
+      "OPTION_1": "Access to all lessons (beginner to advanced)",
+      "OPTION_2": "Interactive exercises and quizzes",
+      "OPTION_3": "Advanced personalized AI feedback",
+      "OPTION_4": "Community forum access",
+      "OPTION_5": "Weekly progress reports",
+      "OPTION_6": "Access to mobile app",
+      "OPTION_7": "Monthly one-on-one tutoring sessions",
+      "OPTION_8": "Access to exclusive webinars and workshops",
+      "SUB_TITLE": "Learners aiming for advanced proficiency and comprehensive learning support",
+      "TITLE": "Prenium"
+    },
+    "SUB_TITLE": "The tool is 100% free! This is just a generic section.",
+    "TITLE": "Plans & Pricing"
   },
   "SETTING": {
     "LANGUAGE": "Language",
@@ -55,5 +104,11 @@
     "ITEM_3": "Tools & Platforms",
     "ITEM_4": "Database Management",
     "TITLE": "Skills"
+  },
+  "STUDENT": {
+    "FEEDBACK_1": "This platform has revolutionized my approach to learning English. The AI feedback is invaluable!",
+    "FEEDBACK_2": "I love the interactive exercises. They make learning so much more enjoyable and effective.",
+    "FEEDBACK_3": "Thanks to the personalized study plan, I've seen significant improvement in my English skills.",
+    "TITLE": "What Our Students Say"
   }
 }

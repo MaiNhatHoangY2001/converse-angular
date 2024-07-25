@@ -32,14 +32,63 @@
     },
     "TITLE": "Lựa chọn khóa học bạn thực sự quan tâm"
   },
+  "FOOTER": {
+    "COOKIES": "Cookies",
+    "PRIVACY": "Quyền riêng tư",
+    "TERMS": "Điều khoản"
+  },
   "HIRE_ME": {
     "TITLE_2": "Một nhà phát triển phần mềm đầy đam mê"
   },
   "HOME": {
     "TITLE_1": "Học tiếng Anh dễ dàng với phương pháp học tập được hỗ trợ bởi AI"
   },
+  "JOURNEY": {
+    "BUTTON": "Đăng ký ngay",
+    "SUB_TITLE": "Hãy tham gia cùng hàng nghìn người học trên toàn thế giới và mở ra vô số cơ hội với tiếng Anh trôi chảy.",
+    "TITLE": "Hãy bắt đầu hành trình của bạn ngay hôm nay!"
+  },
   "LATEST_WORKS": {
     "TITLE": "Tác phẩm mới nhất"
+  },
+  "PLAN": {
+    "BASIC": {
+      "BUTTON": "Bắt đầu gói cơ bản",
+      "OPTION_1": "Truy cập vào tất cả các bài học mới bắt đầu và trung cấp",
+      "OPTION_2": "Bài tập tương tác",
+      "OPTION_3": "Phản hồi AI được cá nhân hóa",
+      "OPTION_4": "Truy cập diễn đàn cộng đồng",
+      "OPTION_5": "Báo cáo tiến độ hai tuần một lần",
+      "OPTION_6": "Truy cập vào ứng dụng di động",
+      "SUB_TITLE": "Người học đang tìm kiếm một lộ trình học tập có cấu trúc với các tính năng thiết yếu",
+      "TITLE": "Nền tảng"
+    },
+    "FREE": {
+      "BUTTON": "Đăng kí miễn phí",
+      "OPTION_1": "Tiếp cận các bài học tiếng Anh cơ bản",
+      "OPTION_2": "Bài tập tương tác",
+      "OPTION_3": "Phản hồi AI hạn chế",
+      "OPTION_4": "Truy cập diễn đàn cộng đồng",
+      "OPTION_5": "Báo cáo tiến độ hàng tuần",
+      "OPTION_6": "Đăng kí miễn phí",
+      "SUB_TITLE": "Người mới bắt đầu muốn khám phá những điều cơ bản",
+      "TITLE": "Miễn phí"
+    },
+    "PRO": {
+      "BUTTON": "Nâng cấp lên Pro",
+      "OPTION_1": "Truy cập vào tất cả các bài học (từ sơ cấp đến nâng cao)",
+      "OPTION_2": "Bài tập và câu đố tương tác",
+      "OPTION_3": "Phản hồi AI được cá nhân hóa nâng cao",
+      "OPTION_4": "Truy cập diễn đàn cộng đồng",
+      "OPTION_5": "Báo cáo tiến độ hàng tuần",
+      "OPTION_6": "Truy cập vào ứng dụng di động",
+      "OPTION_7": "Các buổi dạy kèm riêng hàng tháng",
+      "OPTION_8": "Truy cập vào các hội thảo và hội thảo trực tuyến độc quyền",
+      "SUB_TITLE": "Người học hướng tới trình độ nâng cao và hỗ trợ học tập toàn diện",
+      "TITLE": "Cao cấp"
+    },
+    "SUB_TITLE": "Công cụ này miễn phí 100%! Đây chỉ là một phần chung chung.",
+    "TITLE": "Kế hoạch & Giá cả"
   },
   "SETTING": {
     "LANGUAGE": "Ngôn ngữ",
@@ -55,5 +104,11 @@
     "ITEM_3": "Công cụ & Nền tảng",
     "ITEM_4": "Quản lý cơ sở dữ liệu",
     "TITLE": "Kỹ năng"
+  },
+  "STUDENT": {
+    "FEEDBACK_1": "Nền tảng này đã cách mạng hóa phương pháp học tiếng Anh của tôi. Phản hồi AI là vô giá!",
+    "FEEDBACK_2": "Tôi yêu thích các bài tập tương tác. Chúng làm cho việc học trở nên thú vị và hiệu quả hơn rất nhiều.",
+    "FEEDBACK_3": "Nhờ có kế hoạch học tập cá nhân hóa, kỹ năng tiếng Anh của tôi đã được cải thiện đáng kể.",
+    "TITLE": "Học sinh của chúng tôi nói gì"
   }
 }

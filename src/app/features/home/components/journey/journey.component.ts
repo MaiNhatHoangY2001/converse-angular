@@ -1,18 +1,18 @@
+import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { environment } from '@env/environment';
 import { TranslateModule } from '@ngx-translate/core';
-import { SharedModule } from 'primeng/api';
-import { ToolbarModule } from 'primeng/toolbar';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
-  selector: 'app-footer',
+  selector: 'app-journey',
   standalone: true,
-  imports: [ToolbarModule, SharedModule, TranslateModule],
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss',
+  imports: [ButtonModule, TranslateModule, NgOptimizedImage],
+  templateUrl: './journey.component.html',
+  styleUrl: './journey.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FooterComponent {
+export class JourneyComponent {
   get baseImageUrl() {
     return environment.GOOGLE_STORAGE_URL;
   }

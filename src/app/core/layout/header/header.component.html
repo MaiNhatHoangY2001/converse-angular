@@ -1,5 +1,7 @@
 <p-toolbar class="layout-topbar" styleClass="border-0 rounded-none">
-  <img class="h-11" src="{{ baseImageUrl }}/logo-brand.png" alt="brand.svg" />
+  <a href="/home" rel="noopener noreferrer">
+    <img class="h-11" src="{{ baseImageUrl }}/logo-brand.png" alt="brand.svg" />
+  </a>
 
   <div class="sm:hidden card flex justify-content-center">
     <p-menu #menu [model]="menuItems" [popup]="true" appendTo="body">

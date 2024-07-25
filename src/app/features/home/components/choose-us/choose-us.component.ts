@@ -1,15 +1,10 @@
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Card } from '@app/shared/models';
 import { environment } from '@env/environment';
 import { TranslateModule } from '@ngx-translate/core';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
-
-interface Card {
-  title: string;
-  img: string;
-  description: string;
-}
 
 @Component({
   selector: 'app-choose-us',

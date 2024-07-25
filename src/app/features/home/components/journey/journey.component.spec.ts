@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LatestWorkComponent } from './latest-work.component';
+import { JourneyComponent } from './journey.component';
 
-describe('LatestWorkComponent', () => {
-  let component: LatestWorkComponent;
-  let fixture: ComponentFixture<LatestWorkComponent>;
+describe('JourneyComponent', () => {
+  let component: JourneyComponent;
+  let fixture: ComponentFixture<JourneyComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LatestWorkComponent],
+      imports: [JourneyComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(LatestWorkComponent);
+    fixture = TestBed.createComponent(JourneyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

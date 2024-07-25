@@ -1,13 +1,9 @@
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Card } from '@app/shared/models';
 import { environment } from '@env/environment';
 import { TranslateModule } from '@ngx-translate/core';
 import { CardModule } from 'primeng/card';
-
-interface Card {
-  title: string;
-  img: string;
-}
 
 @Component({
   selector: 'app-course',

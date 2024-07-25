@@ -1,0 +1,19 @@
+<div class="text-center text-[--primary-color-text] text-4xl font-bold">
+  {{ 'STUDENT.TITLE' | translate }}
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-5 mx-3 mt-5">
+  <p-card styleClass="h-full" *ngFor="let content of cardsContent; trackBy: identify">
+    <div class="flex">
+      <p-avatar [label]="content.title[0]" styleClass="mr-2" size="large" shape="circle" />
+      <div class="text-left mt-3">
+        <p-rating [ngModel]="content.rating" [readonly]="true" [cancel]="false" />
+        <p class="text-[--surface-600] text-xl font-bold">
+          {{ content.title | translate }}
+        </p>
+        <p class="text-[--surface-600] text-xl">
+          {{ content.description | translate }}
+        </p>
+      </div>
+    </div>
+  </p-card>
+</div>

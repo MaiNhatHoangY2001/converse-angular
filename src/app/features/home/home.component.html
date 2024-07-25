@@ -22,18 +22,11 @@
         </div>
       </div>
     </div>
-    <app-choose-us class="layout-css xl:h-screen"></app-choose-us>
-    <app-course class="layout-css xl:h-screen"></app-course>
-    <app-latest-work class="layout-last-work md:w-1/2 md:mx-auto"></app-latest-work>
-    <app-footer class="layout-css bg-[--primary-color] md:h-[30vh]"></app-footer>
-    <div class="flex justify-center p-5 md:p-10">
-      <a
-        class="mx-10"
-        [href]="item.link"
-        *ngFor="let item of listIcon; trackBy: identify"
-        target="_blank">
-        <img [src]="item.img" [alt]="item.alt" class="w-8 h-8 sm:w-12 sm:h-12" />
-      </a>
-    </div>
+    <app-choose-us class="layout-css"></app-choose-us>
+    <app-course class="layout-css"></app-course>
+    <app-student class="layout-css bg-[--primary-color] px-5 py-10"></app-student>
+    <app-plan class="layout-css"></app-plan>
+    <app-journey class="layout-css bg-[--primary-color] px-5 py-10"></app-journey>
   </div>
+  <app-footer></app-footer>
 </div>

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/features/home/components/plan/plan.component.scss"],
+  "sourcesContent": [":host ::ng-deep {\n  .p-card-content {\n    @apply h-full;\n  }\n}\n"],
+  "mappings": "AAEI,MAAA,UAAA,CAAA,eAAA,OAAA,IAAA",
+  "names": []
+}

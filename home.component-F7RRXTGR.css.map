@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/features/home/home.component.scss"],
+  "sourcesContent": [".layout-content {\n  @apply flex items-center max-h-screen h-screen w-full justify-evenly flex-col md:flex-row md:mx-auto;\n}\n\n.layout-css {\n  @apply flex items-center justify-evenly flex-col mt-28;\n}\n\n.layout-last-work {\n  @apply flex items-center justify-evenly flex-col mt-20 md:w-3/4 md:mx-auto;\n}\n"],
+  "mappings": "AACE,CAAA,eAAA,QAAA,KAAA,OAAA,MAAA,WAAA,MAAA,MAAA,KAAA,eAAA,OAAA,YAAA,OAAA,gBAAA,YAAA,CAAA,OAAA,CAAA,SAAA,EAAA,OAAA,CAAA,eAAA,YAAA,KAAA,aAAA,KAAA,eAAA,GAAA,CAAA,CAIA,CAAA,WAAA,WAAA,KAAA,QAAA,KAAA,eAAA,OAAA,YAAA,OAAA,gBAAA,YAAA,CAIA,CAAA,iBAAA,WAAA,KAAA,QAAA,KAAA,eAAA,OAAA,YAAA,OAAA,gBAAA,YAAA,CAAA,OAAA,CAAA,SAAA,EAAA,OAAA,CAAA,iBAAA,YAAA,KAAA,aAAA,KAAA,MAAA,GAAA,CAAA",
+  "names": []
+}

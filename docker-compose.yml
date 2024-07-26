@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   app:
-    image: converse-fe:latest
+    image: mainhathoangy2001/converse-fe:latest
     volumes:
       - .:/app 
       - /app/node_modules

@@ -1,0 +1,42 @@
+<app-header [isAuth]="true"></app-header>
+<div class="pt-40">
+  <p-card styleClass=" md:w-[600px]  h-[640px] mx-5 md:mx-auto p-10">
+    <ng-template pTemplate="header">
+      <div class="text-[--surface-600] text-5xl font-bold text-left">
+        {{ 'BUTTON.LOGIN' | translate }}
+      </div>
+      <div class="text-[--surface-600] text-xl text-left mt-4">
+        {{ 'LOGIN.SUBTITLE' | translate }}
+      </div>
+    </ng-template>
+    <form [formGroup]="loginForm" (ngSubmit)="onLoginFormSubmitted()" class="flex flex-col gap-5">
+      <p-floatLabel>
+        <input class="w-full" pInputText id="email" formControlName="email" type="text" />
+        <label for="email">{{ 'LOGIN.EMAIL' | translate }}</label>
+      </p-floatLabel>
+      <p-floatLabel>
+        <input class="w-full" pInputText id="password" formControlName="password" type="password" />
+        <label for="password">{{ 'LOGIN.PASSWORD' | translate }}</label>
+      </p-floatLabel>
+      <a [routerLink]="['/forgot-pass']" class="text-[--primary-color] text-right no-underline">
+        <small>{{ 'LOGIN.FORGOT_PASS' | translate }}</small>
+      </a>
+      <p-button
+        styleClass="w-full"
+        [loading]="isLoading"
+        type="submit"
+        label="{{ 'BUTTON.LOGIN' | translate }}"></p-button>
+      <small class="text-[--surface-600] text-center">
+        {{ 'LOGIN.DONT_ACCOUNT' | translate }}
+        <a [routerLink]="['/register']" class="text-[--primary-color] no-underline">{{
+          'BUTTON.REGISTER' | translate
+        }}</a>
+      </small>
+      <p-divider layout="horizontal" styleClass="flex" [align]="'center'">
+        <div class="text-[--surface-600">{{ 'LOGIN.LOGIN_WITH' | translate }}</div>
+      </p-divider>
+      <asl-google-signin-button class="flex justify-center" [width]="400" type="icon" size="large">
+      </asl-google-signin-button>
+    </form>
+  </p-card>
+</div>

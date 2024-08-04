@@ -1,32 +1,30 @@
-<div class="layout-{{ theme }}">
-  <app-header></app-header>
-  <div class="text-center pt-10 sm:pt-0 pb-0 flex flex-col justify-between">
-    <div class="layout-content">
-      <div class="w-4/5 md:w-[30%] h-1/2 flex flex-col justify-center md:justify-evenly">
-        <div class="text-[--surface-600] text-5xl font-bold text-left my-4 md:my-0">
-          {{ 'HOME.TITLE_1' | translate }}
-        </div>
-        <div class="flex">
-          <p-button
-            class="text-2xl text-left whitespace-nowrap"
-            label="{{ 'BUTTON.LEARN_MORE' | translate }}" />
-          <p-button
-            severity="secondary"
-            class="text-2xl text-left ml-2 whitespace-nowrap"
-            label="{{ 'BUTTON.START_NOW' | translate }}" />
-        </div>
+<app-header></app-header>
+<div class="text-center pt-10 sm:pt-0 pb-0 flex flex-col justify-between">
+  <div class="layout-content">
+    <div class="w-4/5 md:w-[30%] h-1/2 flex flex-col justify-center md:justify-evenly">
+      <div class="text-[--surface-600] text-5xl font-bold text-left my-4 md:my-0">
+        {{ 'HOME.TITLE_1' | translate }}
       </div>
-      <div class="w-4/5 md:w-[45%] text-right">
-        <div class="w-full md:w-9/12 aspect-square relative mx-auto">
-          <img ngSrc="{{ baseImageUrl }}/home.png" alt="home.png" fill priority />
-        </div>
+      <div class="flex">
+        <p-button
+          class="text-2xl text-left whitespace-nowrap"
+          label="{{ 'BUTTON.LEARN_MORE' | translate }}" />
+        <p-button
+          severity="secondary"
+          class="text-2xl text-left ml-2 whitespace-nowrap"
+          label="{{ 'BUTTON.START_NOW' | translate }}" />
       </div>
     </div>
-    <app-choose-us class="layout-css"></app-choose-us>
-    <app-course class="layout-css"></app-course>
-    <app-student class="layout-css bg-[--primary-color] px-5 py-10"></app-student>
-    <app-plan class="layout-css"></app-plan>
-    <app-journey class="layout-css bg-[--primary-color] px-5 py-10"></app-journey>
+    <div class="w-4/5 md:w-[45%] text-right">
+      <div class="w-full md:w-9/12 aspect-square relative mx-auto">
+        <img ngSrc="{{ baseImageUrl }}/home.png" alt="home.png" fill priority />
+      </div>
+    </div>
   </div>
-  <app-footer></app-footer>
+  <app-choose-us class="layout-css"></app-choose-us>
+  <app-course class="layout-css"></app-course>
+  <app-student class="layout-css bg-[--primary-color] px-5 py-10"></app-student>
+  <app-plan class="layout-css"></app-plan>
+  <app-journey class="layout-css bg-[--primary-color] px-5 py-10"></app-journey>
 </div>
+<app-footer></app-footer>

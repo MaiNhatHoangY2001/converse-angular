@@ -1,11 +1,9 @@
 import { NgFor, NgOptimizedImage } from '@angular/common';
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FooterComponent } from '@app/core/layout/footer/footer.component';
 import { HeaderComponent } from '@app/core/layout/header/header.component';
 import { LanguageSettingComponent } from '@app/core/layout/language-setting/language-setting.component';
 import { JourneyComponent } from '@app/features/home/components/journey/journey.component';
-import { ThemeService } from '@app/shared/services/theme.service';
-import { TranslationService } from '@app/shared/services/translation.service';
 import { environment } from '@env/environment';
 import { TranslateModule } from '@ngx-translate/core';
 import { ButtonModule } from 'primeng/button';
@@ -37,23 +35,8 @@ import { StudentComponent } from './components/student/student.component';
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeComponent implements OnInit {
-  constructor(
-    translationService: TranslationService,
-    private themeService: ThemeService,
-  ) {
-    translationService.initLanguage();
-  }
-
-  ngOnInit(): void {
-    this.themeService.initTheme();
-  }
-
-  get theme() {
-    return this.themeService.getTheme();
-  }
-
+export class HomeComponent {
   get baseImageUrl() {
-    return environment.GOOGLE_STORAGE_URL;
+    return environment.googleStorageUrl;
   }
 }

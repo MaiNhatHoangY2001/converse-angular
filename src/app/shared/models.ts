@@ -4,3 +4,11 @@ export interface Card {
   description?: string;
   rating?: number;
 }
+
+export interface User {
+  email: string;
+  token: string;
+  username: string;
+  bio: string;
+  image: string;
+}

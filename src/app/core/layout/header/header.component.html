@@ -22,15 +22,20 @@
       styleClass="h-11 w-11 mx-2"
       (onClick)="onThemeChange(!checked)"></p-button>
     <app-language-setting></app-language-setting>
-    <p-divider layout="vertical" styleClass="mx-2 h-11" />
-    <div class="flex">
-      <p-button
-        [text]="true"
-        severity="secondary"
-        label="{{ 'BUTTON.LOGIN' | translate }}"
-        class="self-center"></p-button>
-      <p-button class="ml-2 self-center" label="{{ 'BUTTON.REGISTER' | translate }}"></p-button>
-    </div>
+    <ng-container *ngIf="!isAuth">
+      <p-divider layout="vertical" styleClass="mx-2 h-11" />
+      <div class="flex">
+        <p-button
+          routerLink="/login"
+          severity="secondary"
+          class="self-center font-bold no-underline"
+          >{{ 'BUTTON.LOGIN' | translate }}
+        </p-button>
+        <p-button routerLink="/register" class="self-center font-bold no-underline ml-2"
+          >{{ 'BUTTON.REGISTER' | translate }}
+        </p-button>
+      </div>
+    </ng-container>
   </div>
 </p-toolbar>
 <p-dialog

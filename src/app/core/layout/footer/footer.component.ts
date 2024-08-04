@@ -14,6 +14,6 @@ import { ToolbarModule } from 'primeng/toolbar';
 })
 export class FooterComponent {
   get baseImageUrl() {
-    return environment.GOOGLE_STORAGE_URL;
+    return environment.googleStorageUrl;
   }
 }

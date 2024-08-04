@@ -14,6 +14,6 @@ import { ButtonModule } from 'primeng/button';
 })
 export class JourneyComponent {
   get baseImageUrl() {
-    return environment.GOOGLE_STORAGE_URL;
+    return environment.googleStorageUrl;
   }
 }

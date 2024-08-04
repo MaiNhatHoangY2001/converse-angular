@@ -149,6 +149,12 @@
             "checkDecorators": ["Component"],
             "checkDestroy": false
           }
+        ],
+        "prettier/prettier": [
+          "error",
+          {
+            "endOfLine": "auto"
+          }
         ]
       }
     },

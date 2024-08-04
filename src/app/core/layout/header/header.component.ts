@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, HostListener, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener, Input, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { LanguageSettingComponent } from '@app/core/layout/language-setting/language-setting.component';
 import { ThemeService } from '@app/shared/services/theme.service';
 import { environment } from '@env/environment';
@@ -48,12 +49,14 @@ const THEME_ITEMS = [
     CommonModule,
     DialogModule,
     DropdownModule,
+    RouterModule,
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent implements OnInit {
+  @Input() isAuth = false;
   checked = false;
   selectedTheme = THEME_ITEMS[0];
   menuItems: MenuItem[] | undefined;
@@ -77,32 +80,16 @@ export class HeaderComponent implements OnInit {
     this.checked = theme === THEME_ITEMS[1].value;
     this.themeItems = THEME_ITEMS;
     this.selectedTheme = THEME_ITEMS.find(tempTheme => tempTheme.value === theme) || THEME_ITEMS[0];
-    this.menuItems = this.initalMenuItem();
+    this.menuItems = this.initialMenuItem();
   }
 
   get baseImageUrl() {
-    return environment.GOOGLE_STORAGE_URL;
+    return environment.googleStorageUrl;
   }
 
-  initalMenuItem() {
-    return [
-      {
-        label: 'BUTTON.LOGIN',
-        icon: 'pi pi-sign-in',
-        command: () => {
-          this.handleLogin();
-        },
-      },
-      {
-        label: 'BUTTON.REGISTER',
-        icon: 'pi pi-user-plus',
-        command: () => {
-          this.handleRegister();
-        },
-      },
-      {
-        separator: true,
-      },
+  // eslint-disable-next-line max-lines-per-function
+  initialMenuItem() {
+    const menuItem = [
       {
         label: 'BUTTON.SETTING',
         icon: 'pi pi-cog',
@@ -111,6 +98,31 @@ export class HeaderComponent implements OnInit {
         },
       },
     ];
+
+    if (!this.isAuth) {
+      return [
+        {
+          label: 'BUTTON.LOGIN',
+          icon: 'pi pi-sign-in',
+          command: () => {
+            this.handleLogin();
+          },
+        },
+        {
+          label: 'BUTTON.REGISTER',
+          icon: 'pi pi-user-plus',
+          command: () => {
+            this.handleRegister();
+          },
+        },
+        {
+          separator: true,
+        },
+        ...menuItem,
+      ];
+    }
+
+    return menuItem;
   }
 
   onThemeChange(check: boolean): void {

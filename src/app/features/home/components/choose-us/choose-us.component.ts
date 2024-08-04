@@ -43,6 +43,6 @@ export class ChooseUsComponent {
   }
 
   get baseImageUrl() {
-    return environment.GOOGLE_STORAGE_URL;
+    return environment.googleStorageUrl;
   }
 }

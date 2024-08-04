@@ -110,5 +110,13 @@
     "FEEDBACK_2": "Tôi yêu thích các bài tập tương tác. Chúng làm cho việc học trở nên thú vị và hiệu quả hơn rất nhiều.",
     "FEEDBACK_3": "Nhờ có kế hoạch học tập cá nhân hóa, kỹ năng tiếng Anh của tôi đã được cải thiện đáng kể.",
     "TITLE": "Học sinh của chúng tôi nói gì"
+  },
+  "LOGIN": {
+    "SUBTITLE": "Đăng nhập để truy cập tài khoản của bạn",
+    "PASSWORD": "Mật khẩu",
+    "DONT_ACCOUNT": "Bạn chưa có tài khoản?",
+    "FORGOT_PASS": "Quên mật khẩu",
+    "LOGIN_WITH": "Hoặc đăng nhập với",
+    "EMAIL": "Email"
   }
 }

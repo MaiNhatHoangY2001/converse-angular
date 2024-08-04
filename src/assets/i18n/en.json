@@ -110,5 +110,13 @@
     "FEEDBACK_2": "I love the interactive exercises. They make learning so much more enjoyable and effective.",
     "FEEDBACK_3": "Thanks to the personalized study plan, I've seen significant improvement in my English skills.",
     "TITLE": "What Our Students Say"
+  },
+  "LOGIN": {
+    "SUBTITLE": "Login to access your account",
+    "PASSWORD": "Password",
+    "DONT_ACCOUNT": "Don’t have an account?",
+    "FORGOT_PASS": "Forgot password",
+    "LOGIN_WITH": "Or login with",
+    "EMAIL": "Email"
   }
 }

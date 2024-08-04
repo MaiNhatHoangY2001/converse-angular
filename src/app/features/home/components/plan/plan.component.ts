@@ -48,7 +48,7 @@ export class PlanComponent {
   ];
 
   get baseImageUrl() {
-    return environment.GOOGLE_STORAGE_URL;
+    return environment.googleStorageUrl;
   }
 
   identify(index: number, item: Plan) {

@@ -2,10 +2,10 @@
 <div class="pt-32">
   <p-card styleClass="md:w-[600px] mx-5 md:mx-auto px-8 py-8">
     <ng-template pTemplate="header">
-      <div class="text-[--surface-600] text-5xl font-bold text-left">
+      <div class="text-[--surface-600] text-3xl font-bold text-left">
         {{ 'BUTTON.LOGIN' | translate }}
       </div>
-      <div class="text-[--surface-600] text-xl text-left mt-4">
+      <div class="text-[--surface-600] text-sm text-left mt-4">
         {{ 'LOGIN.SUBTITLE' | translate }}
       </div>
     </ng-template>
@@ -48,7 +48,7 @@
       <p-button
         styleClass="w-full style-btn-login"
         [icon]="isLoading ? 'pi pi-spin pi-spinner mr-2' : ''"
-        [disabled]="isLoading"
+        [disabled]="isLoading || !loginForm.valid"
         type="submit"
         label="{{ 'BUTTON.LOGIN' | translate }}"></p-button>
       <small class="text-[--surface-600] text-center">

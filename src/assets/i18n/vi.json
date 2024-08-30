@@ -22,21 +22,22 @@
     "TITLE": "Tại sao chọn chúng tôi?"
   },
   "COMMON": {
+    "AND": "Và",
     "ERROR": {
       "ACCOUNT_DEACTIVE": "Tài khoản không hoạt động. \nVui lòng liên hệ với quản trị viên.",
       "CONFIRM_ACCOUNT": "Tài khoản chưa được xác nhận. \nVui lòng xác nhận tài khoản của bạn.",
-      "FAILED_TO_LOGIN": "Không đăng nhập được, vui lòng thử lại sau",
-      "INCORRECT_INFO": "Tên người dùng hoặc mật khẩu không chính xác.",
-      "FIRST_NAME_SPECIFIED": "Tên đầu tiên phải được chỉ định.",
-      "FIRST_NAME_NON_ALPHA": "Tên có ký tự không phải chữ và số.",
-      "LAST_NAME_SPECIFIED": "Họ phải được chỉ định.",
-      "LAST_NAME_NON_ALPHA": "Họ có các ký tự không phải chữ và số.",
-      "EMAIL_SPECIFIED": "Email phải được chỉ định.",
       "EMAIL_NON_EMAIL": "Email phải là địa chỉ email hợp lệ.",
       "EMAIL_REJECT": "Email đã được sử dụng",
-      "PASS_SPECIFIED": "Mật khẩu phải được chỉ định.",
+      "EMAIL_SPECIFIED": "Email phải được chỉ định.",
+      "FAILED_TO_LOGIN": "Không đăng nhập được, vui lòng thử lại sau",
+      "FIRST_NAME_NON_ALPHA": "Tên có ký tự không phải chữ và số.",
+      "FIRST_NAME_SPECIFIED": "Tên đầu tiên phải được chỉ định.",
+      "INCORRECT_INFO": "Tên người dùng hoặc mật khẩu không chính xác.",
+      "LAST_NAME_NON_ALPHA": "Họ có các ký tự không phải chữ và số.",
+      "LAST_NAME_SPECIFIED": "Họ phải được chỉ định.",
+      "OTP_SPECIFIED": "OTP phải được chỉ định.",
       "PASS_NON_PASS": "Mật khẩu phải có 6 ký tự, 1 chữ thường, 1 chữ hoa, 1 số và 1 ký hiệu.",
-      "OTP_SPECIFIED": "OTP phải được chỉ định."
+      "PASS_SPECIFIED": "Mật khẩu phải được chỉ định."
     }
   },
   "COURSE": {
@@ -115,6 +116,17 @@
     },
     "SUB_TITLE": "Công cụ này miễn phí 100%! Đây chỉ là một phần chung chung.",
     "TITLE": "Kế hoạch & Giá cả"
+  },
+  "REGISTER": {
+    "AGREE_TO_OUR": "Đồng ý với chúng tôi",
+    "CONFIRM_PASSWORD": "Xác nhận mật khẩu",
+    "COOKIES_POLICY": "Chính sách cookie",
+    "FIRST_NAME": "Tên",
+    "HAVE_ACCOUNT": "Đã có tài khoản?",
+    "LAST_NAME": "Họ",
+    "PRIVACY_POLICY": "Chính sách bảo mật",
+    "SUBTITLE": "Chúng tôi sẽ thiết lập mọi thứ để bạn có thể truy cập vào tài khoản cá nhân của mình.",
+    "TERMS": "Điều khoản"
   },
   "SETTING": {
     "LANGUAGE": "Ngôn ngữ",

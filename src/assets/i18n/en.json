@@ -22,21 +22,22 @@
     "TITLE": "Why Choose Us?"
   },
   "COMMON": {
+    "AND": "and",
     "ERROR": {
       "ACCOUNT_DEACTIVE": "Account is not active. Please contact admin.",
       "CONFIRM_ACCOUNT": "Account is not confirmed. Please confirm your account.",
-      "FAILED_TO_LOGIN": "Failed to login, please try again later",
-      "INCORRECT_INFO": "Incorrect username or password.",
-      "FIRST_NAME_SPECIFIED": "First name must be specified.",
-      "FIRST_NAME_NON_ALPHA": "First name has non-alphanumeric characters.",
-      "LAST_NAME_SPECIFIED": "Last name must be specified.",
-      "LAST_NAME_NON_ALPHA": "Last name has non-alphanumeric characters.",
-      "EMAIL_SPECIFIED": "Email must be specified.",
       "EMAIL_NON_EMAIL": "Email must be a valid email address.",
       "EMAIL_REJECT": "E-mail already in use",
-      "PASS_SPECIFIED": "Password must be specified.",
-      "PASS_NON_PASS": "The password must contain 6 characters, 1 lower case letter, 1 upper case letter, 1 number and 1 symbol.",
+      "EMAIL_SPECIFIED": "Email must be specified.",
+      "FAILED_TO_LOGIN": "Failed to login, please try again later",
+      "FIRST_NAME_NON_ALPHA": "First name has non-alphanumeric characters.",
+      "FIRST_NAME_SPECIFIED": "First name must be specified.",
+      "INCORRECT_INFO": "Incorrect username or password.",
+      "LAST_NAME_NON_ALPHA": "Last name has non-alphanumeric characters.",
+      "LAST_NAME_SPECIFIED": "Last name must be specified.",
       "OTP_SPECIFIED": "OTP must be specified.",
+      "PASS_NON_PASS": "The password must contain 6 characters, 1 lower case letter, 1 upper case letter, 1 number and 1 symbol.",
+      "PASS_SPECIFIED": "Password must be specified.",
       "TOKEN_SPECIFIED": "Token must be specified."
     }
   },
@@ -116,6 +117,17 @@
     },
     "SUB_TITLE": "The tool is 100% free! This is just a generic section.",
     "TITLE": "Plans & Pricing"
+  },
+  "REGISTER": {
+    "AGREE_TO_OUR": "Agree to our",
+    "CONFIRM_PASSWORD": "Confirm password",
+    "COOKIES_POLICY": "Cookies Policy",
+    "FIRST_NAME": "First name",
+    "HAVE_ACCOUNT": "Already have an account?",
+    "LAST_NAME": "Last name",
+    "PRIVACY_POLICY": "Privacy Policy",
+    "SUBTITLE": "Let’s get you all set up so you can access your personal account.",
+    "TERMS": "Terms"
   },
   "SETTING": {
     "LANGUAGE": "Language",

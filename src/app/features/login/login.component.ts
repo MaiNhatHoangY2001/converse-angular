@@ -1,16 +1,13 @@
-// eslint-disable-next-line eslint-comments/disable-enable-pair
-/* eslint-disable rxjs-angular/prefer-takeuntil */
 import { GoogleSigninButtonModule, SocialAuthService } from '@abacritt/angularx-social-login';
 import { CommonModule } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
-  DestroyRef,
+  OnDestroy,
   OnInit,
   inject,
 } from '@angular/core';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { AuthService } from '@app/core/auth/auth.service';
@@ -22,6 +19,7 @@ import { CardModule } from 'primeng/card';
 import { DividerModule } from 'primeng/divider';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { InputTextModule } from 'primeng/inputtext';
+import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -43,10 +41,10 @@ import { InputTextModule } from 'primeng/inputtext';
   styleUrl: './login.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, OnDestroy {
   private readonly authSvc = inject(AuthService);
   private readonly formBuilder = inject(FormBuilder);
-  private readonly destroyRef = inject(DestroyRef);
+  private ngUnsubscribe = new Subject<void>();
   private readonly router = inject(Router);
   private cdr = inject(ChangeDetectorRef);
   loginForm!: FormGroup;
@@ -55,16 +53,21 @@ export class LoginComponent implements OnInit {
 
   constructor(private authService: SocialAuthService) {}
 
+  ngOnDestroy(): void {
+    this.ngUnsubscribe.next();
+    this.ngUnsubscribe.complete();
+  }
+
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
     });
 
-    this.authService.authState.subscribe(user => {
+    this.authService.authState.pipe(takeUntil(this.ngUnsubscribe)).subscribe(user => {
       this.authSvc
         .loginGoogle(user.idToken)
-        .pipe(takeUntilDestroyed(this.destroyRef))
+        .pipe(takeUntil(this.ngUnsubscribe))
         .subscribe(
           res => {
             this.onLoginSuccess(res);
@@ -84,7 +87,7 @@ export class LoginComponent implements OnInit {
     this.isLoading = true;
     this.authSvc
       .login(this.loginForm.value as Login)
-      .pipe(takeUntilDestroyed(this.destroyRef))
+      .pipe(takeUntil(this.ngUnsubscribe))
       .subscribe(
         res => {
           this.onLoginSuccess(res);

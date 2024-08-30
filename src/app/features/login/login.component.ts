@@ -7,14 +7,14 @@ import {
   ChangeDetectorRef,
   Component,
   DestroyRef,
-  inject,
   OnInit,
+  inject,
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { AuthService } from '@app/core/auth/auth.service';
-import { Login } from '@app/core/auth/login/interfaces';
+import { Login, LoginResponse } from '@app/core/auth/login/interfaces/login.interface';
 import { HeaderComponent } from '@app/core/layout/header/header.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { ButtonModule } from 'primeng/button';
@@ -47,9 +47,11 @@ export class LoginComponent implements OnInit {
   private readonly authSvc = inject(AuthService);
   private readonly formBuilder = inject(FormBuilder);
   private readonly destroyRef = inject(DestroyRef);
+  private readonly router = inject(Router);
   private cdr = inject(ChangeDetectorRef);
   loginForm!: FormGroup;
   isLoading = false;
+  errorMessage = '';
 
   constructor(private authService: SocialAuthService) {}
 
@@ -60,8 +62,17 @@ export class LoginComponent implements OnInit {
     });
 
     this.authService.authState.subscribe(user => {
-      console.log(user);
-      //perform further logics
+      this.authSvc
+        .loginGoogle(user.idToken)
+        .pipe(takeUntilDestroyed(this.destroyRef))
+        .subscribe(
+          res => {
+            this.onLoginSuccess(res);
+          },
+          err => {
+            this.onLoginFailed(err);
+          },
+        );
     });
   }
 
@@ -69,16 +80,57 @@ export class LoginComponent implements OnInit {
     if (!this.loginForm.valid) {
       return;
     }
-
+    this.errorMessage = '';
     this.isLoading = true;
     this.authSvc
       .login(this.loginForm.value as Login)
       .pipe(takeUntilDestroyed(this.destroyRef))
-      .subscribe(() => {
-        console.log('run');
+      .subscribe(
+        res => {
+          this.onLoginSuccess(res);
+        },
+        err => {
+          this.onLoginFailed(err);
+        },
+      );
+  }
 
-        this.isLoading = false;
-        this.cdr.detectChanges();
-      });
+  onLoginSuccess(res: LoginResponse): void {
+    if (res && res?.data) {
+      this.errorMessage = '';
+      this.authSvc.storeTokens(res);
+      this.router.navigate(['/dashboard']);
+    }
+    this.isLoading = false;
+    this.cdr.detectChanges();
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  onLoginFailed(err: any): void {
+    this.showMessageLoginFailed(err?.error?.code || 0);
+    this.isLoading = false;
+    this.cdr.detectChanges();
+  }
+
+  showMessageLoginFailed(code: number): void {
+    switch (code) {
+      case 102:
+        this.errorMessage = 'COMMON.ERROR.INCORRECT_INFO';
+        break;
+      case 103:
+        this.errorMessage = 'COMMON.ERROR.CONFIRM_ACCOUNT';
+        break;
+      case 104:
+        this.errorMessage = 'COMMON.ERROR.ACCOUNT_DEACTIVE';
+        break;
+      case 114:
+        this.errorMessage = 'COMMON.ERROR.EMAIL_NON_EMAIL';
+        break;
+      case 115:
+        this.errorMessage = 'COMMON.ERROR.EMAIL_REJECT';
+        break;
+      default:
+        this.errorMessage = 'COMMON.ERROR.FAILED_TO_LOGIN';
+    }
   }
 }

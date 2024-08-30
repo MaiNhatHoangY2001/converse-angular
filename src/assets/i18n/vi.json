@@ -21,6 +21,24 @@
     },
     "TITLE": "Tại sao chọn chúng tôi?"
   },
+  "COMMON": {
+    "ERROR": {
+      "ACCOUNT_DEACTIVE": "Tài khoản không hoạt động. \nVui lòng liên hệ với quản trị viên.",
+      "CONFIRM_ACCOUNT": "Tài khoản chưa được xác nhận. \nVui lòng xác nhận tài khoản của bạn.",
+      "FAILED_TO_LOGIN": "Không đăng nhập được, vui lòng thử lại sau",
+      "INCORRECT_INFO": "Tên người dùng hoặc mật khẩu không chính xác.",
+      "FIRST_NAME_SPECIFIED": "Tên đầu tiên phải được chỉ định.",
+      "FIRST_NAME_NON_ALPHA": "Tên có ký tự không phải chữ và số.",
+      "LAST_NAME_SPECIFIED": "Họ phải được chỉ định.",
+      "LAST_NAME_NON_ALPHA": "Họ có các ký tự không phải chữ và số.",
+      "EMAIL_SPECIFIED": "Email phải được chỉ định.",
+      "EMAIL_NON_EMAIL": "Email phải là địa chỉ email hợp lệ.",
+      "EMAIL_REJECT": "Email đã được sử dụng",
+      "PASS_SPECIFIED": "Mật khẩu phải được chỉ định.",
+      "PASS_NON_PASS": "Mật khẩu phải có 6 ký tự, 1 chữ thường, 1 chữ hoa, 1 số và 1 ký hiệu.",
+      "OTP_SPECIFIED": "OTP phải được chỉ định."
+    }
+  },
   "COURSE": {
     "ITEM": {
       "TITLE_1": "Tiếng Anh Sơ cấp",
@@ -50,6 +68,14 @@
   },
   "LATEST_WORKS": {
     "TITLE": "Tác phẩm mới nhất"
+  },
+  "LOGIN": {
+    "DONT_ACCOUNT": "Bạn chưa có tài khoản?",
+    "EMAIL": "Email",
+    "FORGOT_PASS": "Quên mật khẩu",
+    "LOGIN_WITH": "Hoặc đăng nhập với",
+    "PASSWORD": "Mật khẩu",
+    "SUBTITLE": "Đăng nhập để truy cập tài khoản của bạn"
   },
   "PLAN": {
     "BASIC": {
@@ -110,13 +136,5 @@
     "FEEDBACK_2": "Tôi yêu thích các bài tập tương tác. Chúng làm cho việc học trở nên thú vị và hiệu quả hơn rất nhiều.",
     "FEEDBACK_3": "Nhờ có kế hoạch học tập cá nhân hóa, kỹ năng tiếng Anh của tôi đã được cải thiện đáng kể.",
     "TITLE": "Học sinh của chúng tôi nói gì"
-  },
-  "LOGIN": {
-    "SUBTITLE": "Đăng nhập để truy cập tài khoản của bạn",
-    "PASSWORD": "Mật khẩu",
-    "DONT_ACCOUNT": "Bạn chưa có tài khoản?",
-    "FORGOT_PASS": "Quên mật khẩu",
-    "LOGIN_WITH": "Hoặc đăng nhập với",
-    "EMAIL": "Email"
   }
 }

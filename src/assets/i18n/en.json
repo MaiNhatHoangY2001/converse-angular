@@ -21,6 +21,25 @@
     },
     "TITLE": "Why Choose Us?"
   },
+  "COMMON": {
+    "ERROR": {
+      "ACCOUNT_DEACTIVE": "Account is not active. Please contact admin.",
+      "CONFIRM_ACCOUNT": "Account is not confirmed. Please confirm your account.",
+      "FAILED_TO_LOGIN": "Failed to login, please try again later",
+      "INCORRECT_INFO": "Incorrect username or password.",
+      "FIRST_NAME_SPECIFIED": "First name must be specified.",
+      "FIRST_NAME_NON_ALPHA": "First name has non-alphanumeric characters.",
+      "LAST_NAME_SPECIFIED": "Last name must be specified.",
+      "LAST_NAME_NON_ALPHA": "Last name has non-alphanumeric characters.",
+      "EMAIL_SPECIFIED": "Email must be specified.",
+      "EMAIL_NON_EMAIL": "Email must be a valid email address.",
+      "EMAIL_REJECT": "E-mail already in use",
+      "PASS_SPECIFIED": "Password must be specified.",
+      "PASS_NON_PASS": "The password must contain 6 characters, 1 lower case letter, 1 upper case letter, 1 number and 1 symbol.",
+      "OTP_SPECIFIED": "OTP must be specified.",
+      "TOKEN_SPECIFIED": "Token must be specified."
+    }
+  },
   "COURSE": {
     "ITEM": {
       "TITLE_1": "Beginner English",
@@ -50,6 +69,14 @@
   },
   "LATEST_WORKS": {
     "TITLE": "Latest Works"
+  },
+  "LOGIN": {
+    "DONT_ACCOUNT": "Don’t have an account?",
+    "EMAIL": "Email",
+    "FORGOT_PASS": "Forgot password",
+    "LOGIN_WITH": "Or login with",
+    "PASSWORD": "Password",
+    "SUBTITLE": "Login to access your account"
   },
   "PLAN": {
     "BASIC": {
@@ -110,13 +137,5 @@
     "FEEDBACK_2": "I love the interactive exercises. They make learning so much more enjoyable and effective.",
     "FEEDBACK_3": "Thanks to the personalized study plan, I've seen significant improvement in my English skills.",
     "TITLE": "What Our Students Say"
-  },
-  "LOGIN": {
-    "SUBTITLE": "Login to access your account",
-    "PASSWORD": "Password",
-    "DONT_ACCOUNT": "Don’t have an account?",
-    "FORGOT_PASS": "Forgot password",
-    "LOGIN_WITH": "Or login with",
-    "EMAIL": "Email"
   }
 }

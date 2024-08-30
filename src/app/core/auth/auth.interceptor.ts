@@ -9,8 +9,6 @@ export const authInterceptor: HttpInterceptorFn = (req, next) => {
   // as we did to login request earlier
   // it means the user does not need to be authenticated
   // so we don't attach authorization header
-  console.log(req.context.get(IS_PUBLIC));
-
   if (req.context.get(IS_PUBLIC)) {
     return next(req);
   }

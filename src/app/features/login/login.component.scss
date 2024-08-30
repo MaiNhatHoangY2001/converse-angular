@@ -1,0 +1,7 @@
+:host::ng-deep .style-btn-login {
+  @apply flex items-center justify-center;
+
+  .p-button-label {
+    @apply flex-none text-center;
+  }
+}

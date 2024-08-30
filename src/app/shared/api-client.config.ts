@@ -1,1 +1,3 @@
-export interface ApiClientConfig {}
+export interface ApiClientConfig {
+  responseTimeout?: number;
+}

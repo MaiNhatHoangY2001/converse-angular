@@ -1,6 +1,6 @@
 <app-header [isAuth]="true"></app-header>
-<div class="pt-40">
-  <p-card styleClass=" md:w-[600px]  h-[640px] mx-5 md:mx-auto p-10">
+<div class="pt-32">
+  <p-card styleClass="md:w-[600px] mx-5 md:mx-auto px-8 py-8">
     <ng-template pTemplate="header">
       <div class="text-[--surface-600] text-5xl font-bold text-left">
         {{ 'BUTTON.LOGIN' | translate }}
@@ -9,21 +9,46 @@
         {{ 'LOGIN.SUBTITLE' | translate }}
       </div>
     </ng-template>
-    <form [formGroup]="loginForm" (ngSubmit)="onLoginFormSubmitted()" class="flex flex-col gap-5">
-      <p-floatLabel>
-        <input class="w-full" pInputText id="email" formControlName="email" type="text" />
-        <label for="email">{{ 'LOGIN.EMAIL' | translate }}</label>
-      </p-floatLabel>
-      <p-floatLabel>
-        <input class="w-full" pInputText id="password" formControlName="password" type="password" />
-        <label for="password">{{ 'LOGIN.PASSWORD' | translate }}</label>
-      </p-floatLabel>
-      <a [routerLink]="['/forgot-pass']" class="text-[--primary-color] text-right no-underline">
-        <small>{{ 'LOGIN.FORGOT_PASS' | translate }}</small>
-      </a>
+    <form [formGroup]="loginForm" (ngSubmit)="onLoginFormSubmitted()" class="flex flex-col gap-2">
+      <div
+        class="rounded-lg border border-solid px-3 py-3.5 w-full border-red-300 flex gap-2 items-center"
+        *ngIf="errorMessage">
+        <i class="pi pi-info-circle text-red-700 font-semibold text-sm"></i>
+        <span class="font-semibold text-sm text-red-700">{{ errorMessage | translate }}</span>
+      </div>
+      <span class="flex flex-col gap-1">
+        <label htmlFor="login-username-input" class="text-sm text-palette-gray-700 font-medium">{{
+          'LOGIN.EMAIL' | translate
+        }}</label>
+        <input
+          pInputText
+          placeholder="your@email.com"
+          [readonly]="isLoading"
+          formControlName="email"
+          class="w-full h-12 read-only:cursor-default" />
+      </span>
+      <span class="flex flex-col gap-1">
+        <label htmlFor="login-username-input" class="text-sm text-palette-gray-700 font-medium">{{
+          'LOGIN.PASSWORD' | translate
+        }}</label>
+        <input
+          pInputText
+          id="password"
+          placeholder="••••••••"
+          [readonly]="isLoading"
+          formControlName="password"
+          type="password"
+          class="w-full h-12 read-only:cursor-default" />
+      </span>
+      <small class="text-right">
+        <a [routerLink]="['/forgot-pass']" class="no-underline text-[--primary-color]">
+          {{ 'LOGIN.FORGOT_PASS' | translate }}
+        </a>
+      </small>
       <p-button
-        styleClass="w-full"
-        [loading]="isLoading"
+        styleClass="w-full style-btn-login"
+        [icon]="isLoading ? 'pi pi-spin pi-spinner mr-2' : ''"
+        [disabled]="isLoading"
         type="submit"
         label="{{ 'BUTTON.LOGIN' | translate }}"></p-button>
       <small class="text-[--surface-600] text-center">

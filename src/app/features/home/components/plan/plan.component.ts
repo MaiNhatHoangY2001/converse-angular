@@ -25,6 +25,7 @@ interface Plan {
 export class PlanComponent {
   cardsContent = [
     {
+      id: 'planFree',
       name: 'FREE',
       title: 'PLAN.FREE.TITLE',
       subTitle: 'PLAN.FREE.SUB_TITLE',
@@ -32,6 +33,7 @@ export class PlanComponent {
       buttonText: 'PLAN.FREE.BUTTON',
     },
     {
+      id: 'planPro',
       name: 'PRO',
       title: 'PLAN.PRO.TITLE',
       subTitle: 'PLAN.PRO.SUB_TITLE',
@@ -39,6 +41,7 @@ export class PlanComponent {
       buttonText: 'PLAN.PRO.BUTTON',
     },
     {
+      id: 'planBasic',
       name: 'BASIC',
       title: 'PLAN.BASIC.TITLE',
       subTitle: 'PLAN.BASIC.SUB_TITLE',

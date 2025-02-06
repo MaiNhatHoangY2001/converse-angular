@@ -61,8 +61,9 @@ export class LoginComponent implements OnInit {
 
     this.authService.authState.subscribe(user => {
       console.log(user);
-      console.log(user2);
-      console.log(user3);
+      // console.log(user2);
+      // console.log(user3);
+      // console.log(user3);
       //perform further logics
     });
   }

@@ -2,26 +2,23 @@ name: Code Review GPT
 
 on:
   pull_request:
-    branches:
-      - main # Adjust to your primary branch if necessary
+    branches: [main]
 
 jobs:
-  review:
+  run_code_review:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
+      pull-requests: write
+      repository-projects: write
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
-
-      - name: Set Up Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v3
         with:
-          node-version: '20' # Use the latest Node.js version (update as needed)
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Run Code Review GPT
-        run: npx code-review-gpt --config .codereviewgpt.json
-        env:
+          fetch-depth: 0
+      - name: Code Review GPT
+        uses: mattzcarey/code-review-gpt@v0.6.0
+        with:
+          GITHUB_TOKEN: ${{ github.token }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          MODEL: 'gpt-4o-mini'
+          REVIEW_LANGUAGE: 'English'

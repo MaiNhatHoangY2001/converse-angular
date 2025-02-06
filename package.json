@@ -10,7 +10,6 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:converse-angular": "node dist/converse-angular/server/server.mjs",
-    "preinstall": "npx only-allow pnpm",
     "lint": "ng lint --force",
     "pretty-quick": "pretty-quick --staged",
     "lint-fix": "ng lint --fix",

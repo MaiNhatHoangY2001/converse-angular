@@ -1,0 +1,27 @@
+name: Code Review GPT
+
+on:
+  pull_request:
+    branches:
+      - main # Adjust to your primary branch if necessary
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set Up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20' # Use the latest Node.js version (update as needed)
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Code Review GPT
+        run: npx code-review-gpt --config .codereviewgpt.json
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}

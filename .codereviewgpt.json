@@ -1,0 +1,5 @@
+{
+  "reviewPaths": ["src/", "lib/"],
+  "maxTokens": 1500,
+  "reviewInstructions": "Please provide constructive feedback on code readability, maintainability, and adherence to best practices."
+}
